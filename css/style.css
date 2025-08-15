@@ -1,0 +1,163 @@
+﻿.banner-img {
+    width: 100%;
+}
+
+.person img {
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+    width: 200px;
+    height: 200px;
+}
+
+#profile-img {
+    width: 240px;
+    float: left;
+    margin-right: 10px;
+}
+
+.galler
+
+#slack-img {
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-right: 20px;
+}
+
+
+.wiki-header {
+    text-align: center;
+}
+
+body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+}
+
+h6 {
+    font-size: 14px;
+}
+
+.p_gallery div img{
+   width: 100%;
+   padding: 5px;
+}
+
+.p_gallery div h5 {
+    text-align: center;
+}
+
+footer p {
+    font-size: 11px;
+    text-align: center;
+}
+
+.project-img {
+    width: 380px;
+    height: 220px;
+}
+
+.project-div {
+    width: 540px;
+}
+
+.project-img-right {
+    float: right;
+}
+
+.project-img-left {
+    float: right;
+}
+
+.align-right {
+    text-align: right;
+    text-overflow: clip;
+}
+
+.clear-float {
+    clear: both;
+}
+
+.fig {
+    font-size: 9px;
+}
+
+.photo-library {
+    width: 100%;
+}
+
+.img-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.photo-library .img-container .gallery {
+    margin: 10px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 150px;
+}
+
+.photo-library .img-container .gallery:hover {
+    border: 1px solid #777;
+}
+
+.photo-library .img-container .gallery img {
+    width: 100%;
+    height: auto;
+    height: 200px;
+}
+
+.photo-library .img-container .desc {
+    padding: 15px;
+    text-align: center;
+}
+
+.clear-float {
+    clear: both;
+}
+
+.pub li {
+    margin-bottom: 5px;
+}
+
+h6 {
+        font-weight: bold;
+    }
+
+@supports (-ms-accelerator:true) {
+    #hyper {
+        width: 350px;
+    }
+    project-img-right {
+        float: left;
+    }
+    
+}
+
+@media only screen and (max-width: 949px) {
+    body {
+        width: 100%;
+    }
+    #profile-img {
+        float: none;
+    }
+    .project-img-right {
+        float: none;
+    }
+    .project-img-left {
+        float: none;
+    }
+    .person img {
+        float: none;
+    }
+    .project-div {
+        width: 100%;
+    }
+    iframe {
+        width: 100%;
+    }
+}
