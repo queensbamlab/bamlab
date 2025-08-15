@@ -1,0 +1,25 @@
+#profile_img {
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin: 10px;
+}
+
+#bio {
+    height: 90px;
+}
+
+#edit-btn {
+    float: right;
+    margin-right: 10px;
+}
+
+#change-btn {
+    float: right;
+    margin-right: 10px;
+}
+
+
+
+
+

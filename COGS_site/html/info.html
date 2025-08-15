@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CogSci Connection</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://bootswatch.com/lumen/bootstrap.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="../css/auth.css">
+</head>
+
+<body>
+    <div id="message">
+
+        <section id="info">
+            <h1>Setup Your Profile</h1>
+            <p>We've noticed this is your first time logging in. Please enter some more information to complete your profile. Stars mark required fields. Don't worry, you can change these later via your profile page.</p>
+
+            <h2>Full Name:*</h2><input type="text" style="width: 100%" id="info_full_name" class="required">
+            <br>
+            <br>
+            <h2>Photo URL:</h2><input type="text" style="width: 100%" id="info_photo">
+            <br>
+            <br>
+            <h2>Research in Cognitive Science:*</h2><input type="text" style="width: 100%" id="info_bio" maxlength="160" class="required">
+            <br>
+            <br>
+            <h2>Affiliation:*</h2><input type="text" style="width: 100%" id="info_affiliation" class="required">
+            <br>
+            <br>
+            <h2>Website:</h2><input type="text" style="width: 100%" id="info_website">
+            <br>
+            <br>
+            <h2>Contactable Research Areas:</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" id="checkbox_psyc" class="checkbox_info" value="Cognitive Psychology"></td>
+                        <td>Cognitive Psychology</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="checkbox_neuro" class="checkbox_info" value="Neuroscience"></td>
+                        <td>Neuroscience</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="checkbox_ling" class="checkbox_info" value="Linguistics"></td>
+                        <td>Linguistics</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="checkbox_ai" class="checkbox_info" value="Artificial Intelligence"></td>
+                        <td>Artificial Intelligence</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="checkbox_phil" class="checkbox_info" value="Philosophy"></td>
+                        <td>Philosophy</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <br>
+            <button type="button" class="btn btn-default btn-sm" style="float: right;" id="submitBtn">Submit</button>
+            <br style="clear: both;">
+        </section>
+
+
+
+    </div>
+    
+    <script src="../js/info.js" type="application/javascript"></script>
+</body>
+
+</html>

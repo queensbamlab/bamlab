@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CogSci Connection</title>
+    <meta name="author" content="Morgan Gallant">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://bootswatch.com/lumen/bootstrap.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <img src="assets/cogs_banner.png" style="width: 100%;" alt="Banner">
+
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                            aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                        <a class="navbar-brand" href="">
+                            <!--                        <img id="brand-img" alt="Brand" src="assets/queens_wordmark.png">-->
+                            Cognitive Science Research Group
+                        </a>
+                    </div>
+
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li id="profile_index" class="hide"><a>Profile</a></li>
+                                    <li id="sign_up_index"><a href="html/auth.html">Sign Up / Log In</a></li>
+                                    <li role="separator" class="divider hide" id="index_seperator"></li>
+                                    <li id="logout_index" class="hide"><a href="">Log Out</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+
+        <img src="assets/image002.png" alt="image" id="info-img">
+        <section id="about">
+            <h4>About Us</h4>
+            <br>
+            <p style="margin-right: 5px;">The Cognitive Science research group consists of researchers from the Faculty of Arts and Science at Queen’s
+                who are working in relevant disciplines on understanding and simulating various aspects of human cognition,
+                cognitive disabilities, and developing assistive technologies. <br>We invite philosophers, researchers and
+                the general audience to contribute to research problems by posting ideas, contributing data and participating
+                in ongoing research studies accessible on this web site. You can also find out more about the research in
+                the area of cognitive science at Queen’s from the websites of the researchers.</p>
+            <br>
+            <br>
+            <br>
+        </section>
+        <br>
+        <row>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">The Cognitive Science Program</div>
+
+                    <!-- List group -->
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            At Queen’s University the Cognitive Science Program is offered by the School of Computing. It is an Honors Subject of Specialization
+                            degree program, which specifies courses from a variety of disciplines including School of Computing,
+                            Psychology, Linguistics, Philosophy and Neuroscience. Students choose two of the three option
+                            areas from Philosophy, Psychology and Linguistics and complete 120 units (54 units of mandatory
+                            or core courses + 42 units from defined option areas + 24 units of elective courses) of course
+                            work to complete the degree requirements. As a part of the final year capstone project, students
+                            choose a research topic in cognitive science and a supervisor from any of the related disciplines
+                            to work with for one term.
+                        </li>
+                        <li class="list-group-item">
+                            <p>Important Information:</p>
+                            <ul>
+                                <li><a href="http://www.cs.queensu.ca/applicants/cogscience/program.php">Detailed Program Information</a></li>
+                                <li><a href="http://research.cs.queensu.ca/~farhana/supporting-pages/requisitechart.html">Course Pre-Requisite Chart</a></li>
+                                <li><a href="http://research.cs.queensu.ca/~farhana/supporting-pages/faq.html">Frequently Asked Questions</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default" id="fac">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">Faculty Members</div>
+                    <select id="faculty-select-target">
+                            <option>All</option>
+                            <option>Cognitive Psychology</option>
+                            <option>Neuroscience</option>
+                            <option>Linguistics</option>
+                            <option>Artificial Intelligence</option>
+                            <option>Philosophy</option>
+                        </select>
+                    <ul class="users-table" id="usrtable">
+                    </ul>
+                </div>
+            </div>
+        </row>
+
+        <row>
+            <div class="col-md-7">
+                <section class="panel panel-primary">
+
+                    <div class="panel-heading">Posts
+
+                        <button id="newPostBtn" class="btn disabled">New Post</button>
+                        <button id="loadMorePosts" class="btn">Load More Posts</button>
+                    </div>
+                    <div class="post-box">
+
+                        <select id="index-post-target" class="hide">
+                                  <option>General</option>
+                                  <option>Cognitive Psychology</option>
+                                  <option>Neuroscience</option>
+                                  <option>Linguistics</option>
+                                  <option>Artificial Intelligence</option>
+                                  <option>Philosophy</option>
+                                  </select>
+
+                        <ul class="list-group" id="listGroupItem">
+
+                        </ul>
+                    </div>
+
+                </section>
+
+            </div>
+            <div class="col-md-5">
+                <section class="panel panel-primary">
+                    <div class="panel-heading"><p style="display: inline;">Upcoming Events</p>
+                        <button id="newEvent" class="btn disabled">New Event</button>
+                        <button class="btn" id="loadMoreEvents">Show All</button>
+                    </div>
+
+                    <div class="calender-box">
+                        <ul class="list-group" id="calender-list-group">
+                            <li class="calender-li">
+                                <p class="name">Name</p>
+                                <p class="time">Location | Time</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                </section>
+            </div>
+        </row>
+
+
+
+
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+    <script src="js/index.js" type="application/javascript"></script>
+</body>
+
+</html>
