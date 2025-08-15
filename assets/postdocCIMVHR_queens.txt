@@ -1,0 +1,65 @@
+Postdoctoral fellowship in text data analytics 
+
+Posting Date:		Mar 5, 2018 (revised - higher salary and international applicants will be considered)
+Job Title:		Post-Doctoral Fellow, School of Computing, Queen's University
+Funded by: 		IBM and CIMVHR (Canadian Institute of Military and Veteran Health Research)
+Department:		School of Computing, Queen's University
+Collaborators: 		University of Manitoba, Western University
+Project Title: 		Defining Post Traumatic Stress Disorder (PTSD) in Primary Care Electronic 
+			Medical Record (EMR) Data to Explore Prevalence, Patient Characteristics and 
+			Primary Care Experiences of Veterans, Families of Military Service Members 
+			and the General Population 
+Research Areas:		Natural Language Processing (NLP), text mining, machine learning,
+			knowledge representation and management, medical decision support system
+Supervision:		Dr. Farhana Zulkernine and academic collaborators 
+			(primarily Dr. Alexander Singer, University of Manitoba)
+Remuneration:		$50,000 CDN per year (including all benefits)
+Start Date:		May 1st, 2018 
+Duration:		2 years
+Application Deadline: 	Until hired 
+Application Procedure:	Apply by email by sending the application package to 
+			farhana@cs.queensu.ca.
+
+Qualifications:	We seek a candidate with proven expertise in text data mining, natural language
+processing (NLP), deep learning/machine learning, knowledge management using big data storage systems 
+and knowledge sharing using cloud services. The work will focus on using NLP and text mining 
+techniques to extract terms that are representative of PTSD diagnosis from doctors' chart notes 
+stored in the EMR systems. The data must be anonymized and analyzed to extract indicators of 
+possible development or progression towards developing PTSD and diagnosis of PTSD in different 
+sectors such as veteran population, their families and general public to understand and evaluate 
+quality of primary care for patients with PTSD. The extracted and analyzed data must be stored 
+to enable knowledge translation and sharing with the research community. 
+     A PhD in Computer Science or a comparable qualification is required. The successful candidate 
+must have a good research record with publications in relevant international conferences and 
+journals, text analytics, and machine learning. The candidate is expected to have an active role 
+in various collaboration efforts with other universities and industry, both at the national and 
+international level. Good communication and project management skills and willingness to work in 
+a team are essential. Additional information about Dr. Zulkernine's research and the project can 
+be found at http://cs.queensu.ca/~farhana/. 
+    The position is for two years and is funded by IBM and CIMVHR (Canadian Institute for Military 
+and Veteran Health Research). The candidate will be working in the Big Data Analytics and Management 
+laboratory (BAM Lab) at the School of Computing, Queen's University but will be closely collaborating 
+with Dr. Alex Singer at the University of Manitoba and other collaborators involved in this project.
+Periodic reports must be presented about the status and progression of the work. The candidate will
+also be expected to supervise other graduate and undergraduate students on relevant project and  
+will have an opportunity to have joint publications and gather experiences in academic jobs.
+    The School of Computing is one of the premier computing departments in Canada with about 30 
+faculty members and close to 150 graduate students. Kingston is Canada's first capital and is centrally 
+located between Toronto, Ottawa, and Montreal. The United Nations rates Canada as one of the best 
+countries in the world to live. The project will provide a unique opportunity to the candidate to work 
+with multiple experts on an interdisciplinary research which will contribute to Canada's health care 
+system and allow exploration of cutting edge tools and techniques in text data analytics, knowledge 
+management, and machine learning. 
+
+Please send one application package (a zip file) to farhana@cs.queensu.ca containing:
+1) A cover letter explaining experiences relevant to the project.   
+2) A curriculum vitae with detailed information regarding your academic degree, 
+research projects and publications. 
+3) Names and email addresses of three referees. 
+4) Sample publications (1-2 recent publications). 
+***Canadian citizen/immigrant/permanent resident will be given priority.
+
+EMPLOYMENT EQUITY: The University invites applications from all qualified candidates. Queen's is 
+committed to employment equity and diversity in the workplace and welcomes applications from women, 
+visible minorities, Aboriginal peoples, persons with disabilities, and persons of any sexual 
+orientation or gender identity.
