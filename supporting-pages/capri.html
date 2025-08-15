@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Farhana Zulkernine</title>
+    <meta name="author" content="Morgan Gallant">
+
+    <!--Bootstrap Stuff-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap-theme.min.css">
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <header>
+        <img src="../assets/banner.jpg" class="banner-img" alt="Banner">
+
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="../index.html">Profile</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">BAM Lab <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../bam-lab/">Home</a></li>
+                                    <li><a href="../bam-lab/people/">People</a></li>
+                                    <li><a href="../bam-lab/projects/">Projects</a></li>
+                                    <li><a href="../bam-lab/publications/">Publications</a></li>
+                                    <li><a href="../bam-lab/gallery/">Gallery</a></li>
+                                    <li><a href="../bam-lab/wiki/">Wiki</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Research Tools <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="https://github.com/queensbamlab">GitHub</a></li>
+                                    <li class="active"><a href="../supporting-pages/capri.html">CAPRI Tool</a></li>
+                                    <li><a href="../supporting-pages/claaas.html">CLAaaS Demo</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="http://research.cs.queensu.ca/~farhana/COGS_site/">Cognitive Science</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section class="capri">
+        
+            <h4>Capri Download</h4>
+            <br>
+            <h6>Capri: <a href="../assets/capri.rar">capri.rar</a></h6>
+            <h6>Sample Data: <a href="../assets/data_samples.rar">data_samples.rar</a></h6>
+            <hr>
+            <h4>Installation:</h4>
+            <p>Java class files are provided in a downloadable rar file. Extract the class files in a directory. Install the Java run-time library of version 1.6 and make sure that it is on the system path.</p>
+            <hr>
+            <h4>Usage:</h4>
+            <p>java Capri [inputfile] [outputfile]</p>
+            <hr>
+            <h4>Description:</h4>
+            <p>The Capri tool is used to mine structural line patterns in a type-casted format from single and multi-line semi-structured log data files. By default it generates a text output file "LTVPatterns.txt" where it lists the line patterns, frequent term and value patterns and the association rules which show the contextual relationships between pairs of line patterns. The tool prompts for input and output files, frequent line, term and value support thresholds, and support and confidence thresholds for the rules. Only input file name is mandatory and the others are optional. If output file name is provided, the tool generates a similar copy of the input file with the exception that each line is labeled with a line number and a pattern id to facilitate the next phase of data processing. For large input files, output file name can be omitted to avoid regenerating the whole data. The tool extracts frequent, rare and interesting (containing 3 or more consecutive symbols in a word) line patterns. For mining frequent line, term and value patterns, it requests minimum support threshold for each of these and uses a default value if the user does not enter a value. Typically a rule is generated for every possible pair of line patterns that appear in the data file. To minimize the rule set, user can enter a minimum support and confidence threshold for the rules. A default value is set if the user does not enter a value.</p>
+            
+        </section>
+        
+        
+        
+        <footer>
+            <hr>
+        <p><a href="http://www.queensu.ca/index.html">Queen's University</a> | <a href="http://www.queensu.ca/artsci/">Faculty of Arts and Science</a> | <a href="http://www.cs.queensu.ca/">School of Computing</a> | <a href="http://www.cs.queensu.ca/research/index.html">Queens Research</a></p><p>Last Updated: July 20th, 2017</p>
+        </footer>
+
+
+    </div>
+
+</body>
+
+</html>
