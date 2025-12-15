@@ -117,6 +117,7 @@ export function MobileNav({
                                   href={subItem.href}
                                   key={subItem.href}
                                   className="text-xl"
+                                  onOpenChange={setOpen}
                                 >
                                   {subItem.label}
                                 </MobileLink>
@@ -143,17 +144,15 @@ function MobileLink({
   children,
   ...props
 }: LinkProps & {
-  onOpenChange?: (open: boolean) => void;
+  onOpenChange: (open: boolean) => void;
   children: React.ReactNode;
   className?: string;
 }) {
-  const router = useRouter();
   return (
     <Link
       href={href}
       onClick={() => {
-        router.push(href.toString());
-        onOpenChange?.(false);
+        onOpenChange(false);
       }}
       className={cn("text-2xl font-medium hover:underline", className)}
       {...props}
