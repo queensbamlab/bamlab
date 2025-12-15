@@ -97,7 +97,7 @@ const ClientPage = ({
             <h3 className="text-center md:text-start font-serif">
               Pioneering the future of intelligent systems through advanced
               research in big data, cloud computing, and cognitive science at
-              Queen's University.
+              Queen&apos;s University.
             </h3>
             <div className="flex gap-2">
               <Button size={"sm"} asChild className="group">

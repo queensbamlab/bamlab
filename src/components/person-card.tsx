@@ -48,40 +48,22 @@ const PersonCard = ({ person }: { person: PersonProps }) => {
         )}
 
         <div className="flex gap-2 mt-auto">
-          <Button
-            size="sm"
-            variant={"outline"}
-            className="bg-transparent"
-            asChild
-          >
+          <Button size="sm" variant={"outline"} asChild>
             <Link href={`mailto:${person.email}`}>
-              <Mail className="size-4 mr-2" />
-              Email
+              <Mail className="size-4" />
             </Link>
           </Button>
           {person.website && (
-            <Button
-              asChild
-              size="sm"
-              variant={"outline"}
-              className="bg-transparent"
-            >
+            <Button asChild size="sm" variant={"outline"}>
               <Link href={person.website}>
-                <Globe className="size-4 mr-2" />
-                Website
+                <Globe className="size-4" />
               </Link>
             </Button>
           )}
           {person.linkedin && (
-            <Button
-              asChild
-              size="sm"
-              variant={"outline"}
-              className="bg-transparent"
-            >
+            <Button asChild size="sm" variant={"outline"}>
               <Link href={person.linkedin}>
-                <Linkedin className="size-4 mr-2" />
-                LinkedIn
+                <Linkedin className="size-4" />
               </Link>
             </Button>
           )}
