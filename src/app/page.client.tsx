@@ -471,8 +471,6 @@ const ClientPage = ({
                   ? "border-l-primary"
                   : publication.type === "Conference"
                   ? "border-l-primary/70"
-                  : publication.type === "Workshop"
-                  ? "border-l-primary/40"
                   : "border-l-primary/20";
               return (
                 <Card
@@ -526,10 +524,6 @@ const ClientPage = ({
                     </p>
                   </CardContent>
                   <CardFooter className="flex gap-2">
-                    <Button size={"sm"} className="text-xs" variant={"outline"}>
-                      <File className="size-3 mr-1" />
-                      PDF
-                    </Button>
                     {publication.link && (
                       <Button
                         size={"sm"}
@@ -537,8 +531,21 @@ const ClientPage = ({
                         className="text-xs"
                         variant={"outline"}
                       >
-                        <Link href={publication.link}>
+                        <Link href={publication.link} target="_blank">
                           <SquareArrowOutUpRight className="size-3 mr-1" /> Link
+                        </Link>
+                      </Button>
+                    )}
+                    {publication.pdf && (
+                      <Button
+                        size={"sm"}
+                        asChild
+                        className="text-xs"
+                        variant={"outline"}
+                      >
+                        <Link href={publication.pdf} target="_blank">
+                          <File className="size-3 mr-1" />
+                          PDF
                         </Link>
                       </Button>
                     )}

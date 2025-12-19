@@ -169,7 +169,6 @@ const ClientPage = ({
                 <SelectItem value="All">All Types</SelectItem>
                 <SelectItem value="Journal">Journals</SelectItem>
                 <SelectItem value="Conference">Conferences</SelectItem>
-                <SelectItem value="Workshop">Workshops</SelectItem>
                 <SelectItem value="Book">Books</SelectItem>
                 <SelectItem value="Book Chapter">Book Chapters</SelectItem>
                 <SelectItem value="Award">Award Winning</SelectItem>
@@ -253,8 +252,6 @@ const PublicationCard = ({ pub }: { pub: EnrichedPublication }) => {
         return "border-l-primary";
       case "Conference":
         return "border-l-primary/70";
-      case "Workshop":
-        return "border-l-primary/40";
       case "Book":
       case "Book Chapter":
         return "border-l-primary/30";
@@ -294,7 +291,9 @@ const PublicationCard = ({ pub }: { pub: EnrichedPublication }) => {
           </div>
         </div>
 
-        <CardTitle className="text-lg leading-tight max-sm:mt-4">{pub.title}</CardTitle>
+        <CardTitle className="text-lg leading-tight max-sm:mt-4">
+          {pub.title}
+        </CardTitle>
         <CardDescription>
           {pub.enrichedAuthors.map((author, i) => (
             <Fragment key={i}>
@@ -312,11 +311,6 @@ const PublicationCard = ({ pub }: { pub: EnrichedPublication }) => {
             {pub.type !== "Book" ? "Published in:" : "Published by:"}
           </span>{" "}
           {pub.venue}
-          {pub.workshop && (
-            <div className="border-l border-muted-foreground pl-2">
-              {pub.workshop}
-            </div>
-          )}
           {pub.specialIssue && (
             <div className="text-primary/80 italic">
               {/* <span className="font-medium not-italic">Special Issue:</span>{" "} */}
@@ -327,14 +321,6 @@ const PublicationCard = ({ pub }: { pub: EnrichedPublication }) => {
 
         <div className="flex items-center justify-between">
           <div className="flex gap-2">
-            <Button
-              size="sm"
-              variant={"outline"}
-              data-umami-event={`Publication PDF Download`}
-            >
-              <FileText className="size-4 mr-2" />
-              PDF
-            </Button>
             {pub.link && (
               <Button
                 size="sm"
@@ -342,9 +328,22 @@ const PublicationCard = ({ pub }: { pub: EnrichedPublication }) => {
                 variant={"outline"}
                 data-umami-event={`Publication Link Click`}
               >
-                <Link href={pub.link}>
+                <Link href={pub.link} target="_blank">
                   <ExternalLink className="size-4 mr-2" />
                   Link
+                </Link>
+              </Button>
+            )}
+            {pub.pdf && (
+              <Button
+                size="sm"
+                asChild
+                variant={"outline"}
+                data-umami-event={`Publication PDF Download`}
+              >
+                <Link href={pub.pdf} target="_blank">
+                  <FileText className="size-4 mr-2" />
+                  PDF
                 </Link>
               </Button>
             )}
